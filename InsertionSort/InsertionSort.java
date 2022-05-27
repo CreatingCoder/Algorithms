@@ -8,29 +8,37 @@
     Average case:| O(n^2) 
     **/
 
-class InsertionSort(array) {
+class InsertionSort {
+
+
+   void sort(int array[]){
+   
+      for(int i = 0; i < array.length; i++){
+         int valueToCompare = array[i];
+         int position = i;
+      
+         while(0 < position && array[position -1] > valueToCompare){
+            array[position] = array[position - 1];
+            System.out.println("Moved " + valueToCompare + " to the left of " + array[position]);
+            position = position - 1;
+         }
+         array[position] = valueToCompare;
+      }
+      
+     //For loop below is only for printing
+      System.out.print("The final result is " );
+      for(int j = 0; j < array.length; ++j){
+         System.out.print(array[j] + " ");
+      }
+   }
+
+
+   public static void main(String args[]){
+   
+      int myArray[] = {5,3,4,1,2};
+      InsertionSort object = new InsertionSort(); 
+      object.sort(myArray);
+   }
+}
   
     
-     System.out.println('we skip over position 0 comparison because there is no value to the left of it');
-    for(let i = 0; i < array.length; i++){
-
-        let valueToCompare = array[i];
-        position = i;
-        System.out.println('Comparing ' + valueToCompare + ' at position ' + position);
-
-        while(0 < position && array[position - 1] > valueToCompare){
-            array[position] = array[position - 1];
-             System.out.println('moved ' + valueToCompare + ' to the left ' + array[position]);
-            position = position - 1;
-        }
-        array[position] = valueToCompare
-    } 
-     System.out.println('the final result is ' + array)  
-  return array;
-}
-
-
-public static void main(String args[]){
-myArray = [5,3,4,1,2];
-InsertionSort(myArray);
-}
