@@ -25,7 +25,7 @@ function InsertionSort(array) {
         }
         array[position] = valueToCompare
     } 
-    console.log('the final result is ' + array)  
+    console.log('the final result is ' + array);  
   return array;
 }
 
