@@ -23,7 +23,7 @@ function InsertionSort(array) {
             console.log('moved ' + valueToCompare + ' to the left ' + array[position]);
             position = position - 1;
         }
-        array[position] = valueToCompare
+        array[position] = valueToCompare;
     } 
     console.log('the final result is ' + array);  
   return array;
