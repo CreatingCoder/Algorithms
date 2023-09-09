@@ -26,6 +26,5 @@ def InsertionSort(array):
         
     print('the final result is ' + str(array))
 
-
 myArray = [5,3,4,1,2]
 InsertionSort(myArray)
